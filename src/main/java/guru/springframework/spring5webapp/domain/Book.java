@@ -1,7 +1,6 @@
 package guru.springframework.spring5webapp.domain;
 
 import javax.persistence.*;
-import java.util.Objects;
 import java.util.Set;
 @Entity
 public class Book {
@@ -85,7 +84,7 @@ public class Book {
 
         Book book = (Book) o;
 
-        return Objects.equals(id, book.id);
+        return id != null ? id.equals(book.id) : book.id == null;
     }
 
     @Override
