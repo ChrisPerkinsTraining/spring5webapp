@@ -13,6 +13,9 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    /*
+     *  Set out the Author side of the database mapping
+     */
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books;
 
