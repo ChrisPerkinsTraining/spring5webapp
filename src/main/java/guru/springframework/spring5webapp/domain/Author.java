@@ -62,6 +62,19 @@ public class Author {
     }
 
     /*
+     * Implement toString() method.
+     */
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
+    }
+
+    /*
      * Implement the equals() and hashCode() methods.
      */
     @Override

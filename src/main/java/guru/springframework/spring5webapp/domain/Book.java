@@ -63,6 +63,19 @@ public class Book {
     }
 
     /*
+     * Implement toString() method.
+     */
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", authors=" + authors +
+                '}';
+    }
+
+    /*
      * Implement the equals() and hashCode() methods.
      */
     @Override
