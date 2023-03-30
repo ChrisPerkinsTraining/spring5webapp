@@ -32,47 +32,6 @@ public class Publisher {
         this.postcode = postcode;
     }
 
-    @Override
-    public String toString() {
-        return "Publisher{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", property='" + property + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", county='" + county + '\'' +
-                ", postcode='" + postcode + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Publisher publisher = (Publisher) o;
-
-        if (!Objects.equals(id, publisher.id)) return false;
-        if (!Objects.equals(name, publisher.name)) return false;
-        if (!Objects.equals(property, publisher.property)) return false;
-        if (!Objects.equals(address, publisher.address)) return false;
-        if (!Objects.equals(city, publisher.city)) return false;
-        if (!Objects.equals(county, publisher.county)) return false;
-        return Objects.equals(postcode, publisher.postcode);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (property != null ? property.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + (city != null ? city.hashCode() : 0);
-        result = 31 * result + (county != null ? county.hashCode() : 0);
-        result = 31 * result + (postcode != null ? postcode.hashCode() : 0);
-        return result;
-    }
-
     public Long getId() {
         return id;
     }
@@ -129,5 +88,31 @@ public class Publisher {
         this.postcode = postcode;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        Publisher publisher = (Publisher) o;
+
+        return Objects.equals(id, publisher.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", property='" + property + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", county='" + county + '\'' +
+                ", postcode='" + postcode + '\'' +
+                '}';
+    }
 }
